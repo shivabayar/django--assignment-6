@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://getbootstrap.com/examples/carousel/ -->
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <title>All Tasks</title>
+
+    <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  
+  <table class="table table-condensedd">
+  <tr>
+    <th>
+      <h4>Task Title</h4>
+    </th>
+    <th>
+      <h4>Created On</h4>
+    </th>
+    <th>
+      <h4>Assigned To</h4>
+    </th>
+    <th>
+      <h4>Priority</h4>
+    </th>
+  </tr>
+  {% for task in all_task %}
+    <tr>
+      <td>
+        {{task.title}}
+      </td>
+      <td>
+        {{task.created_date}}
+      </td>
+      <td>
+        {{task.user_name}}
+      </td>
+      <td>
+        {{task.priority}}
+      </td>
+    </tr>
+  {% endfor %}
+  </table>
+  
+  <!-- <h4>{{task.task_name}}</h4> -->
+  
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="js/vendor/jquery-1.11.0.js"></script>
+  <script src="js/vendor/bootstrap.min.js"></script>
+  <script src="js/vendor/bootstrap.js"></script>
+  <script src="js/main.js"></script>
+</head>
+</body>
+</html>
