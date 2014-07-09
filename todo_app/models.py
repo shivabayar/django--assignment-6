@@ -29,7 +29,7 @@ STATUS = (
 #         model = User
 #         fields = ('username', 'email', 'password')
 
-        
+
 class task(models.Model):
 	user_name  =models.ForeignKey(User)
 	# task_name = models.CharField(max_length=200)
@@ -40,7 +40,3 @@ class task(models.Model):
 	status = models.IntegerField(choices=STATUS,default=0)
 	visiblity = models.IntegerField(choices=VISIBILITY,default=0)
 	dead_line = models.CharField(max_length=200)
-
-	# def __unicode__(self):
-	# 	# return unicode(self.task_name,self.user_name,self.title,self.created_date,self.priority,self.status,self.visiblity,self.dead_line).encode('utf-8')
-	# 	return unicode(self.task_name).encode('utf-8')

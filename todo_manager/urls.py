@@ -13,8 +13,11 @@ urlpatterns = patterns('',
 	# url(r'^index/signup$',views.signup) #sign up for creating new user
 	# url(r'^index/login$',views.login) #log in for existing user
 	# url(r'^index/login/tasks/[1-9]{1,}/$',views.tasksDisplay) #display page after login
-	url(r'^tasks/',views.allTasksDisplay) ,
+	# url(r'^tasks/',views.allTasksDisplay) ,
 	url(r'^publictasks/',views.get_all_public_tasks) ,
-	url(r'^tasks/(?P<user_id>\w+)$',views.get_user_tasks)
-
+	url(r'^privatetasks/',views.get_all_private_tasks) ,
+	url(r'^task/(?P<user_id>\w+)$',views.get_user_tasks),
+	url(r'^login',views.validate_login),
+	url(r'^tasks/',views.view_user_tasks) ,
+	# url(r'^register',views.register_user),
 )
